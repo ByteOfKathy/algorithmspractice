@@ -6,7 +6,7 @@ midpoint = 0
 
 def heapify(arr, elem):
 
-    isLeaf = False
+    swapped = False 
 
     if len(arr) % 2 == 0: # even
         midpoint = len(arr)/2
