@@ -36,9 +36,13 @@ def maxheapsort(arr):
 
 # main
 
-arr = [ 12, 11, 13, 5, 6, 7] 
+myfile = open('heap.in', 'r')
+arr = [int(i) for i in myfile.readline().strip().split()] 
 maxheapsort(arr) 
 n = len(arr) 
 print ("Sorted array is") 
 for i in range(n): 
     print ("%d" %arr[i]), 
+
+print(arr)
+myfile.close()
