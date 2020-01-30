@@ -1,6 +1,6 @@
 # leetcode
 class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
+    def twoSum(self, nums, target):
         """
         :type nums: List[int]
         :type target: int
@@ -8,7 +8,7 @@ class Solution:
         """
         myMap = {}
         for i in range(len(nums)):
-            currNum = num[i]
+            currNum = nums[i]
             need = target - currNum
             if need in myMap.keys():
                 return [myMap[need], i]
