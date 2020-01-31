@@ -4,6 +4,8 @@ class node:
         self.__right = None
         self.__val = val
 
+    # getters
+
     def getRight(self):
         return self.__right
 
@@ -12,6 +14,17 @@ class node:
 
     def getVal(self):
         return self.__val
+
+    # setters
+
+    def setRight(self, val):
+        self.__right = val
+
+    def setLeft(self, val):
+        self.__left = val
+
+    def setVal(self, val):
+        self.__val = val
 
 # left, root, right
 def printInorder(root):
@@ -38,3 +51,15 @@ def printPostorder(root):
         printPostorder(root.getRight())
         print(root.getVal())
     
+# todo
+def printLevelorder(root):
+    pass
+    for i in range(len(arr)):
+        pass
+        
+
+def __printGivenorder(root, level):
+    pass
+
+def __height(node):
+    pass
