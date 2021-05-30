@@ -50,16 +50,31 @@ def printPostorder(root):
         printPostorder(root.getLeft())
         printPostorder(root.getRight())
         print(root.getVal())
-    
-# todo
-def printLevelorder(root):
-    pass
-    for i in range(len(arr)):
-        pass
-        
 
-def __printGivenorder(root, level):
-    pass
+def printLevelOrder(root):
+    if root:
+        q = []
+        q.append(root)
 
-def __height(node):
-    pass
+        while q:
+            height = len(q)
+            print("level {}".format(height))
+            while height > 0:
+                temp = q.pop(0)
+                print(temp.getVal(), end = ' ')
+                if temp.getLeft():
+                    q.append(temp.getLeft())
+                if temp.getRight():
+                    q.append(temp.getRight())
+                height -= 1
+            print()
+
+# main
+root = node(1)
+root.setLeft(node(2))
+root.setRight(node(3))
+root.getLeft().setLeft(node(4))
+root.getLeft().setRight(node(5))
+root.getRight().setRight(node(6))
+ 
+printLevelOrder(root)
