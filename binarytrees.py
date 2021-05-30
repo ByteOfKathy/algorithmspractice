@@ -53,12 +53,12 @@ def printPostorder(root):
 
 def printLevelOrder(root):
     if root:
+        # queue
         q = []
         q.append(root)
 
         while q:
             height = len(q)
-            print("level {}".format(height))
             while height > 0:
                 temp = q.pop(0)
                 print(temp.getVal(), end = ' ')
