@@ -33,16 +33,3 @@ def maxheapsort(arr):
         # swap 
         arr[i], arr[0] = arr[0], arr[i] 
         heapify(arr, i, 0) 
-
-# main
-
-myfile = open('heap.in', 'r')
-arr = [int(i) for i in myfile.readline().strip().split()] 
-maxheapsort(arr) 
-n = len(arr) 
-print ("Sorted array is") 
-for i in range(n): 
-    print ("%d" %arr[i]), 
-
-print(arr)
-myfile.close()
